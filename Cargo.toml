@@ -1,0 +1,16 @@
+[package]
+name = "api_libs"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+http = "0.2"
+serde_json = "*"
+serde = { version = "1.0", features = ["derive"] }
+
+spin-sdk = { git = "https://github.com/fermyon/spin", tag = "v0.5.0" }
+bytes = "1"
+anyhow = "1"
+juniper = "0.15.10"
