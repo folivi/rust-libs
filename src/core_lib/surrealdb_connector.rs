@@ -8,7 +8,7 @@ pub struct SurrealDbConnector {
 impl Default for SurrealDbConnector {
     fn default() -> Self {
         SurrealDbConnector {
-            url: "http://212.47.235.167:4400".to_string(),
+            url: "http://localhost:4400".to_string(),
         }
     }
 }
@@ -22,7 +22,7 @@ impl SurrealDbConnector {
             .header("NS", "my_namespace")
             .header("DB", "my_namespace")
             .header("Authorization", "Basic cm9vdDpyb290")
-            .uri("http://212.47.235.167:4400/sql")
+            .uri("http://localhost:4400/sql")
     }
 }
 #[derive(Debug, Serialize, Deserialize)]
