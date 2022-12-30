@@ -14,7 +14,7 @@ impl Default for SurrealDbConnector {
 }
 
 impl SurrealDbConnector {
-    pub fn get_builder() -> http::request::Builder {
+    pub fn get_builder(surrealdb_url: &str) -> http::request::Builder {
         http::Request::builder()
             .method(method::Method::POST)
             .header("Accept", "application/json")
@@ -22,7 +22,7 @@ impl SurrealDbConnector {
             .header("NS", "my_namespace")
             .header("DB", "my_namespace")
             .header("Authorization", "Basic cm9vdDpyb290")
-            .uri("http://0.0.0.0:4400/sql")
+            .uri(surrealdb_url)
     }
 }
 #[derive(Debug, Serialize, Deserialize)]
