@@ -25,7 +25,7 @@ impl SurrealDbConnector {
             .uri(surrealdb_url)
     }
 }
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct SurrealdbResponse {
     pub time: String,
     pub status: String,
